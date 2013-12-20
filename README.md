@@ -4,6 +4,7 @@ You can specify what slot in a class you want to record the trace to, kill trace
 
 You should tweak this code to your liking, but I mostly used it on fairly intensive computing to measure performances about a slice of the code. Kill paths help you limit the depth of the tracing. 
 
+You should not use this decorator on multi-threaded applications...
 
 ## Example from `trace_me`
 Assuming the following snippet:
