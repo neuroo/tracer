@@ -1,7 +1,9 @@
 # tracer
-This is a small utility to embed in your python applications. It will help you trace what's happening.
-
+This is a small utility to embed in your python applications. It will help you trace what's happening. 
 You can specify what slot in a class you want to record the trace to, kill traces, etc.
+
+You should tweak this code to your liking, but I mostly used it on fairly intensive computing to measure performances about a slice of the code. Kill paths help you limit the depth of the tracing. 
+
 
 ## Example from `trace_me`
 Assuming the following snippet:
