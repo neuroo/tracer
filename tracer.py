@@ -193,7 +193,7 @@ def trace(slots=None, record_all=False, killpath=None, initpath=None):
 
         class_name = clazz.__name__
 
-        to_wrap_fields = get_class_fields(clazz)
+        to_wrap_fields = get_class_fields(clazz, slots, record_all)
         if not to_wrap_fields:
             # Nothing to wrap...
             return clazz
@@ -221,6 +221,10 @@ class TraceUtils(object):
     @staticmethod
     def get_trace():
         return TRACE_INSPECTOR.get_trace()
+
+    @staticmethod
+    def print_trace():
+        print TRACE_INSPECTOR
 
     @staticmethod
     def get_trace_string():
